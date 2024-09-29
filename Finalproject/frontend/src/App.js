@@ -16,12 +16,22 @@ import StudentResults from "./Components/examComponent/StudentResults";
 import ExamView from "./Components/examComponent/examandResultComponent/ExamView";
 import Results from "./Components/examComponent/examandResultComponent/Results";
 
+import Add from "./Components/universityComponent/Add";
+import AdminProfile from "./Components/universityComponent/AdminProfile";
+import AllUniversities from "./Components/universityComponent/AllUniversities";
+import AllStudents from "./Components/universityComponent/AllStudents";
+import Login from "./Components/universityComponent/Login";
+import UniversityLogin from "./Components/universityComponent/UniversityLogin";
+import UniProfile from "./Components/universityComponent/UniProfile";
+import UpdateUniversity from "./Components/universityComponent/UpdateUniversity";
+
 import { Route, Routes } from "react-router-dom";
+import Menu from "./Components/universityComponent/Menu";
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/course-page" element={<Maincview />} />
         <Route path="/course-view/:id" element={<CourseView />} />
@@ -41,6 +51,18 @@ function App() {
 
         <Route path="/examview" element={<ExamView />} />
         <Route path="/results" element={<Results />} />
+
+        {/* uni route */}
+        <Route path="/unihome" element={<Menu />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/add" element={<Add />} />
+        <Route path="/uniLog" element={<UniversityLogin />} />
+        <Route path="/uniProfile" element={<UniProfile />} />
+        <Route path="/updateUni/:id" element={<UpdateUniversity />} />
+        <Route path="/adminProfile" element={<AdminProfile />} />
+        <Route path="/profile" element={<AdminProfile />} />
+        <Route path="/allUniversities" element={<AllUniversities />} />
+        <Route path="/allStudents" element={<AllStudents />} />
       </Routes>
     </>
   );
