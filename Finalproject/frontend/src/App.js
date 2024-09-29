@@ -35,22 +35,21 @@ import Login from "./Components/universityComponent/Login";
 import UniversityLogin from "./Components/universityComponent/UniversityLogin";
 import UniProfile from "./Components/universityComponent/UniProfile";
 import UpdateUniversity from "./Components/universityComponent/UpdateUniversity";
-
-import { Route, Routes } from "react-router-dom";
 import Menu from "./Components/universityComponent/Menu";
+import { Route, Routes } from "react-router-dom";
 
-import {Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
     <>
-      {/* <Header /> */}
+      
       <Routes>
         <Route path="/course-page" element={<Maincview />} />
         <Route path="/course-view/:id" element={<CourseView />} />
-      <Header />
+      {/* <Header /> */}
      
-        <Routes>
+      
           {/* Course Routes */}
           <Route path="/course-page" element={<Maincview />} />
           <Route path="/course-view/:id" element={<CourseView />} />
@@ -87,7 +86,7 @@ function App() {
         <Route path="/profile" element={<AdminProfile />} />
         <Route path="/allUniversities" element={<AllUniversities />} />
         <Route path="/allStudents" element={<AllStudents />} />
-      </Routes>
+     
            {/*Visa Routes */}
            <Route path="/visa" element={<Visa/>} />
            <Route path="/mainhome" element={<Home />} />

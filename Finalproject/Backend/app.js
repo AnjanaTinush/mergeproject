@@ -23,11 +23,6 @@ app.use("/universities", universityRouter);
 app.use("/api/questions", questionRoutes);
 app.use("/api", examRoutes);
 app.use("/posts", postRoutes);
-
-mongoose
-  .connect("mongodb+srv://UAS:YfuHjRSAVRwncMi4@cluster0.lrlkb.mongodb.net/")
-  .then(() => console.log("Connected to MongoDB"))
-  .then(() => {
 app.use('/UserUploads',express.static("UserUploads/"));
 
 //workers
@@ -37,11 +32,9 @@ app.use('/auth',UserRoutes);
 app.use("/Users",router);
 
 
-
-
 mongoose.connect("mongodb+srv://ebuysl:ebuysl@cluster0.1awm1om.mongodb.net/curd-database")
 .then(() => console.log("Connected to MongoDB"))
 .then(() => {
     app.listen(5000);
-  })
-  .catch((err) => console.log(err));
+})
+.catch((err) => console.log(err));
