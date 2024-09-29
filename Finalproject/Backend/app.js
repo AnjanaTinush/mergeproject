@@ -5,6 +5,9 @@ const courseRouter = require("./Routes/courseRoute/CourseRoutes");
 const universityRouter = require("./Routes/courseRoute/UniversityRoutes");
 //workers
 const UserRoutes=require('./Routes/workRoute/UserRoute');
+const router = require("./Routes/visaRoute/visaRoute");
+
+//visa
 
 const app = express();
 const cors = require("cors");
@@ -18,6 +21,9 @@ app.use('/UserUploads',express.static("UserUploads/"));
 
 //workers
 app.use('/auth',UserRoutes);
+
+//visa
+app.use("/Users",router);
 
 
 
