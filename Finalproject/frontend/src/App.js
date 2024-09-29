@@ -8,16 +8,13 @@ import UcourseView from "./Components/courseComponent/Universitycouses/Ucousrevi
 import UpdateCourseForm from "./Components/courseComponent/Universitycouses/UpdateCourseForm";
 import AddCourseForm from "./Components/courseComponent/Universitycouses/AddCourseForm";
 
-// import QuestionList from "./components/QuestionList";
-// import QuestionForm from "./components/QuestionForm";
-// import QuestionDetail from "./components/QuestionDetail";
-// import GeneratedPaper from "./components/GeneratedPaper";
-// import StudentResults from "./components/StudentResults";
 import QuestionList from "./Components/examComponent/QuestionList";
 import QuestionForm from "./Components/examComponent/QuestionForm";
 import QuestionDetail from "./Components/examComponent/QuestionDetail";
 import GeneratedPaper from "./Components/examComponent/GeneratedPaper";
 import StudentResults from "./Components/examComponent/StudentResults";
+import ExamView from "./Components/examComponent/examandResultComponent/ExamView";
+import Results from "./Components/examComponent/examandResultComponent/Results";
 
 import { Route, Routes } from "react-router-dom";
 
@@ -41,6 +38,9 @@ function App() {
         <Route path="/question/:id" element={<QuestionDetail />} />
         <Route path="/generated-paper" element={<GeneratedPaper />} />
         <Route path="/student-results" element={<StudentResults />} />
+
+        <Route path="/examview" element={<ExamView />} />
+        <Route path="/results" element={<Results />} />
       </Routes>
     </>
   );
